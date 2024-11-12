@@ -1,0 +1,654 @@
+/* Your custom styles here */
+/*produc-color*/
+.ui-w-40 {
+  width: 40px !important;
+  height: auto;
+}
+
+/*logo*/
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar {
+  z-index: 2;
+  background-color: #38419d;
+  color: rgb(44, 119, 185);
+
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #52d3d8;
+
+}
+
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #200e3a;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-info,
+.feedback {
+  margin: 20px 0;
+  /* Add margin to both sections */
+}
+
+/*contact info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: rgb(44, 119, 185);
+
+}
+
+.contact-info h5 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  line-height: 1.5;
+  /* Add line-height for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 575.98px) {
+  .product {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+body {
+    background: #ddd;
+    min-height: 100vh;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.title {
+    margin-bottom: 5vh;
+}
+
+.card {
+    margin: auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+
+@media(max-width:767px) {
+    .card {
+        margin: 3vh auto;
+    }
+}
+
+.cart {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media(max-width:767px) {
+    .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+
+.summary {
+    background-color: #ddd;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+    color: rgb(65, 65, 65);
+}
+
+@media(max-width:767px) {
+    .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+.summary .col-2, .summary .col-10 {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+.title b {
+    font-size: 1.5rem;
+}
+
+.main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+.col-2, .col {
+    padding: 0 1vh;
+}
+
+a {
+    padding: 0 1vh;
+}
+
+.close {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+img {
+    width: 3.5rem;
+}
+
+.back-to-shop {
+    margin-top: 4.5rem;
+}
+
+h5 {
+    margin-top: 4vh;
+}
+
+hr {
+    margin-top: 1.25rem;
+}
+
+form {
+    padding: 2vh 0;
+}
+
+select, input {
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    padding: 1vh;
+    margin-bottom: 4vh;
+    outline: none;
+    width: 100%;
+    background-color: rgb(247, 247, 247);
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.btn {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -webkit-user-select: none;
+    transition: none;
+}
+
+.btn:hover {
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#code {
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.253), rgba(255, 255, 255, 0.185)), url("https://img.icons8.com/small/16/000000/long-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: center;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.quantity-btn {
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+}
+
+.quantity-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.quantity-input {
+    width: 50px;
+    max-width: 50px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-weight: bold;
+    color: #333;
+    margin: 0 auto;
+}
+/* cart */
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image-gallery,
+.main-image,
+.product-details {
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    
+   
+}
+
+/* Image Gallery */
+.image-gallery {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Main Image */
+.main-image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Details */
+.product-details {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.product-details .sku {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+}
+
+.product-details .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.discount {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.original-price {
+    font-size: 16px;
+    color: #b3b3b3;
+    text-decoration: line-through;
+}
+
+/* Color Selection */
+.product-details .color {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.color-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+/* Dimensions and Material */
+.product-details h3 {
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: #fff;
+}
+
+.product-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+/* Quantity and Buttons */
+.quantity-buy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quantity-buy input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+.quantity-buy button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.buy-now {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+.buy-now:hover {
+    background-color: #d03800;
+}
+
+/* Policies */
+.policy {
+    margin-top: 20px;
+}
+
+.policy p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #b3b3b3;
+}
+//
+//
+/* Ẩn radio buttons */
+.image-gallery input[type="radio"] {
+    display: none;
+}
+
+/* Định dạng hình ảnh nhỏ trong image-gallery */
+.image-gallery label {
+    display: block;
+    cursor: pointer;
+}
+
+.image-gallery label img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-gallery label img:hover {
+    transform: scale(1.05);
+}
+
+/* Hiển thị chỉ ảnh được chọn trong main-image */
+.main-image .image {
+    display: none;
+}
+
+#img1:checked ~ .main-image .img1,
+#img2:checked ~ .main-image .img2,
+#img3:checked ~ .main-image .img3 {
+    display: block;
+}
+
+.main-image .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Media queries cho các thiết bị khác nhau */
+
+/* Desktop */
+/* Các quy tắc chung ở đây */
+
+.container {
+    display: flex; /* Sử dụng flexbox cho container */
+    flex-direction: column; /* Hướng cột cho các phần trên thiết bị nhỏ hơn */
+}
+
+@media (min-width: 1024px) {
+    .product-main {
+        display: flex; /* Sắp xếp hình ảnh sản phẩm chính và gallery theo hàng */
+        width: 100%; /* Đặt chiều rộng của phần chính là 100% */
+        justify-content: space-between; /* Căn giữa các phần tử con */
+    }
+
+    .image-gallery {
+        display: flex; /* Sử dụng flexbox cho gallery */
+        flex-direction: column; /* Đặt hướng dọc */
+        width: 30%; /* Chiều rộng của gallery */
+        margin-right: 20px; /* Khoảng cách giữa gallery và hình ảnh chính */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Đặt chiều rộng của hình ảnh trong gallery */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        margin-bottom: 10px; /* Khoảng cách giữa các hình ảnh */
+        cursor: pointer; /* Thêm con trỏ khi di chuột */
+    }
+
+    .main-image {
+        width: 70%; /* Chiều rộng của hình ảnh chính */
+    }
+
+    .main-image img {
+        width: 100%; /* Đặt chiều rộng của hình ảnh chính là 100% */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+    }
+
+    .product-details {
+        width: 100%; /* Chiều rộng của chi tiết sản phẩm là 100% */
+        max-width: 1180px; /* Giới hạn chiều rộng tối đa */
+        padding: 20px; /* Thêm khoảng đệm cho phần chi tiết sản phẩm */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+        margin-top: 20px; /* Khoảng cách giữa sản phẩm và chi tiết sản phẩm */
+    }
+}
+
+
+/* Tablet */
+/* Các quy tắc chung ở đây */
+
+/* Các quy tắc chung ở đây */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        display: flex; /* Sử dụng flexbox để dễ dàng căn chỉnh các phần tử */
+        flex-direction: column; /* Chuyển đổi hướng thành cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+
+    .product-main {
+        display: flex; /* Sử dụng flexbox cho phần chính */
+        width: 100%; /* Đặt chiều rộng của phần chính là 100% */
+        justify-content: center; /* Căn giữa phần tử con */
+    }
+
+    .image-gallery {
+        display: flex; /* Sử dụng flexbox cho gallery */
+        flex-direction: column; /* Đặt hướng dọc */
+        width: 30%; /* Chiều rộng của gallery */
+        margin-right: 20px; /* Khoảng cách giữa gallery và hình ảnh chính */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Đặt chiều rộng của hình ảnh trong gallery */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+        margin-bottom: 10px; /* Khoảng cách giữa các hình ảnh */
+        cursor: pointer; /* Thêm con trỏ khi di chuột */
+    }
+
+    .main-image {
+        width: 70%; /* Chiều rộng của hình ảnh chính */
+    }
+
+    .main-image img {
+        width: 100%; /* Đặt chiều rộng của hình ảnh chính là 100% */
+        height: auto; /* Tự động điều chỉnh chiều cao */
+    }
+
+    .product-details {
+        width: 100%; /* Chiều rộng của chi tiết sản phẩm là 100% */
+        max-width: 800px; /* Giới hạn chiều rộng tối đa */
+        padding: 20px; /* Thêm khoảng đệm cho phần chi tiết sản phẩm */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+        margin-top: 20px; /* Khoảng cách giữa sản phẩm và chi tiết sản phẩm */
+    }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-gallery,
+    .main-image,
+    .product-details {
+        width: 100%;
+        margin: 0;
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto; /* Cho phép cuộn nếu có nhiều hình ảnh */
+    }
+
+    .image-gallery img {
+        min-width: 100px; /* Chiều rộng tối thiểu cho hình ảnh nhỏ */
+    }
+
+    .quantity-buy {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quantity-buy input[type="number"] {
+        margin-bottom: 10px;
+    }
+}

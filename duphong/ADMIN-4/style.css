@@ -1,0 +1,64 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.table-container {
+  max-width: 100%; /* Cho phép chiều rộng tối đa 100% của col-lg-8 */
+  overflow-x: auto; /* Tạo thanh cuộn ngang nếu cần */
+  margin: auto; /* Căn giữa bảng */
+}
+
+table {
+  width: 100%; /* Chiều rộng của bảng chiếm 100% diện tích chứa */
+  border-collapse: collapse; /* Kết hợp các border của ô */
+  margin-bottom: 20px; /* Khoảng cách dưới bảng */
+}
+
+table, th, td {
+  border: 1px solid #ddd; /* Đường viền cho bảng và ô */
+}
+
+th, td {
+  padding: 10px; /* Khoảng cách bên trong ô */
+  text-align: left; /* Căn trái cho văn bản */
+}
+
+th {
+  background-color: #f2f2f2; /* Màu nền cho tiêu đề */
+}
+
+form {
+  max-width: fit-content; /* Chiều rộng tối đa của form */
+  margin: auto; /* Căn giữa form */
+  background: #fff; /* Màu nền của form */
+  padding: 20px; /* Khoảng cách bên trong form */
+  border-radius: 8px; /* Bo tròn góc */
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%; /* Chiều rộng tối đa của ô nhập liệu */
+  padding: 10px; /* Khoảng cách bên trong ô nhập liệu */
+  margin: 5px 0 10px 0; /* Khoảng cách giữa các ô */
+  display: inline-block; /* Hiển thị dạng inline-block */
+  border: 1px solid #ccc; /* Đường viền cho ô nhập liệu */
+  border-radius: 4px; /* Bo tròn góc */
+}
+
+button {
+  background-color: #4CAF50; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  padding: 10px; /* Khoảng cách bên trong nút */
+  border: none; /* Không có đường viền */
+  border-radius: 4px; /* Bo tròn góc */
+  cursor: pointer; /* Con trỏ thay đổi khi hover */
+  width: 100%; /* Chiều rộng tối đa của nút */
+  margin-top: 10px; /* Khoảng cách trên nút */
+}
+
+button:hover {
+  background-color: #45a049; /* Màu nền khi hover */
+}

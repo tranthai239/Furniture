@@ -1,0 +1,44 @@
+/* Đặt lại margin, padding, và font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header cố định ở đầu trang */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s; /* Thêm hiệu ứng chuyển động */
+}
+
+.header.hidden {
+    transform: translateY(-100%); /* Ẩn header khi cuộn */
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+}
+.card {
+    height: 200px; /* Kích thước ảnh */
+}
