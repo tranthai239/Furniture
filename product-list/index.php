@@ -380,40 +380,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             }
         }
         }   */
-        .filter-bar {
-          width:fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.filter-icon {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
-  margin-right: 15px;
-  cursor: pointer;
-}
-
-.brand-filter button, .sort-options button {
-  background-color: #f8f9fa;
-  border: 1px solid #ddd;
-  color: #333;
-  font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 20px;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.brand-filter button:hover, .sort-options button:hover {
-  background-color: #ddd;
-  color: #000;
-}
-
+       
 .sort-options {
   display: flex;
   align-items: center;
@@ -447,13 +414,28 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         flex-direction: column; /* Hiển thị sản phẩm theo chiều dọc khi trên màn hình nhỏ */
     }
     .product-card {
-        width: 100%; /* Mỗi sản phẩm chiếm toàn bộ chiều rộng khi trên màn hình nhỏ */
+        width: 200px; /* Mỗi sản phẩm chiếm toàn bộ chiều rộng khi trên màn hình nhỏ */
     }
+}
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.filter-section form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
 }
 
 
 
   </style>
+ 
+    
+
+  
 
 </head>
 
@@ -471,14 +453,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-          <li class="nav-item">
-              <a class="nav-link" href="../product-list/index.php">Product</a>
+               <li class="nav-item active">
+              <a class="nav-link" href="../main-product">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../product-cart/index.php">Cart</a>
+              <a class="nav-link" href="../product-list">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contact">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../product-cart">Cart</a>
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
@@ -522,29 +510,43 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 
         <!-- Filter Dropdown -->
+                  <div class="col-lg-12 col-md-9 p-3">
+
+           
+<div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <input type="text" id="searchInput" class="form-control" placeholder="Enter product name or SKU">
+            </div>
+            <div class="col-md-3">
+                <select id="searchBy" class="form-control">
+                    <option value="all">Show All</option>
+                    <option value="NameProduct">Search by Name</option>
+                    <option value="SKU">Search by SKU</option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <button id="searchButton" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    <div id="productList" style="display: flex;flex-wrap:wrap; "> <?php include 'product.php'; ?></div>
+
+  </div>
+</div>
 
 
 
+
+
+         </div>
+
+            
      
    
             
-          <div class="col-lg-12 col-md-9 p-3">
-             <div ><h1 class="heading" style="background-color: black; width: fit-content; border-radius: 10px;padding: 10px;margin: 0 auto;">our product</h1>
-               <div class="col-lg-12 col-md-12 col-sm-12" >
-        <div class="filter-bar">
-          <span class="filter-icon">&#x1F50D; Lọc</span> <!-- Icon lọc -->
-          <div class="brand-filter">
-            <button>Bàn</button>
-            <button>Ghế</button>
-            <button>tủ</button>
-            <button>giường</button>
-            <button>tủ bếp</button>
+     
+              
             
-          </div>
-         
-        </div>
-      </div>
-             <?php include 'product.php'; ?></div>
             
           </div>
         </div>
@@ -559,35 +561,21 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
     </main>
 
-    <footer>
+     <footer>
       <!-- Footer content here -->
       <div class="container">
         <div class="row">
           <div class="col-md-6">
             <div class="contact-info">
               <h5>Contact Information</h5>
+              <P> trần thanh thái</P>
               <p>Hai Ba Trung - Ha noi</p>
               <p>Email: tranthai2309hg@gmail.com</p>
               <p>Phone: +84 86 7747 280</p>
+              <p> DHTI15A9HN</p>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="feedback">
-              <h5>Send Feedback</h5>
-              <form>
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-              </form>
-            </div>
-          </div>
+        
         </div>
       </div>
     </footer>
@@ -600,45 +588,18 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
      <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".brand-filter button");
-    const productList = document.querySelector(".product-list");
+    
 
-    // Lập danh sách các SKU tương ứng với từng nút
-    const skuFilters = {
-        "Bàn ăn": "BANAN",   // SKU cho sản phẩm Bàn
-        "Ghế": "GHE",   // SKU cho sản phẩm Ghế
-        "tủ quần áo": "TUQUANAO",  
-        "tủ": "TUKE",   // SKU cho sản phẩm Tủ
-        "tủ bếp": "TUBEP",
-        // SKU cho sản phẩm Giường
-    };
+    
+  
+   
 
-    buttons.forEach(button => {
-        button.addEventListener("click", function() {
-            const selectedSKU = skuFilters[button.textContent];  // Lấy SKU từ tên nút
-
-            // Duyệt qua tất cả sản phẩm và ẩn/hiện dựa trên SKU
-            document.querySelectorAll(".product-card").forEach(card => {
-                const productSKU = card.dataset.sku;  // Lấy SKU của sản phẩm từ data-sku trong HTML
-                if (selectedSKU && productSKU !== selectedSKU) {
-                    card.style.display = "none";  // Ẩn sản phẩm không phù hợp
-                } else {
-                    card.style.display = "block"; // Hiển thị sản phẩm phù hợp
-                }
-            });
-
-            // Nếu có sản phẩm phù hợp, sẽ tự động hiển thị các sản phẩm trong một dòng
-            productList.style.display = "flex";  // Đảm bảo rằng các sản phẩm sẽ hiển thị theo dòng
-            productList.style.flexWrap = "wrap"; // Các sản phẩm sẽ tự động xuống dòng khi không đủ không gian
-        });
-    });
-});
 
 
 
 
 </script>
+<script src="main-js/filter.js"></script>
 
     <script src="main-js/script.js"></script>
 </body>

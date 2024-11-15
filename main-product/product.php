@@ -125,8 +125,8 @@
     }
 
     // Lấy dữ liệu sản phẩm
-    $sql = "SELECT ProductCode, NameProduct, Price, DiscountPrice, ImagePath, Color, Dimensions, Material, Policies, SKU 
-                FROM `product-demo` WHERE Quantity > 1";
+    $sql = "SELECT ProductCode, NameProduct, Price, DiscountPrice, ImagePath, Color, Dimensions, Material, Policies, SKU ,STA
+                FROM `product-info` WHERE Quantity > 1  AND STA = 'demo-active'";
     $result = $conn->query($sql);
 
     // Tạo các mảng để phân loại sản phẩm
@@ -213,7 +213,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['ProductCode'])) {
   $ProductCode = $_POST['ProductCode'];
 
   // Câu truy vấn sản phẩm dựa trên NameProduct
-  $sql = "SELECT ProductCode, NameProduct, Price, ImagePath, SKU FROM `product-demo` WHERE ProductCode = ?";
+  $sql = "SELECT ProductCode, NameProduct, Price, ImagePath, SKU FROM `product-info` WHERE ProductCode = ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("s", $ProductCode);
   $stmt->execute();

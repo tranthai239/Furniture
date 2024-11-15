@@ -77,18 +77,21 @@ $conn->close();
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../product list/Product list.html">Home <span class="sr-only">(current)</span></a>
+               <li class="nav-item active">
+              <a class="nav-link" href="../main-product">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
+              <a class="nav-link" href="../product-list">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Birthday-event</a>
+              <a class="nav-link" href="../contact">contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">About us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../product-cart">Cart</a>
+            </li>>
           </ul>
            <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -113,7 +116,7 @@ $conn->close();
     </nav>
   </header>
 
-  <main>
+  <main style="background-color: #52d3d8;">
                    
    
        <div class="container">
@@ -182,42 +185,24 @@ $conn->close();
     
   </main>
 
-  <footer style="
-    width: -webkit-fill-available;
-    
-    bottom: 0%;
-">
-    <!-- Footer content here -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="contact-info">
-            <h5>Contact Information</h5>
-            <p>123 Street Name, City, Country</p>
-            <p>Email: example@example.com</p>
-            <p>Phone: +123 456 789</p>
+   <footer>
+      <!-- Footer content here -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <h5>Contact Information</h5>
+              <P> trần thanh thái</P>
+              <p>Hai Ba Trung - Ha noi</p>
+              <p>Email: tranthai2309hg@gmail.com</p>
+              <p>Phone: +84 86 7747 280</p>
+              <p> DHTI15A9HN</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="feedback">
-            <h5>Send Feedback</h5>
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-          </div>
+        
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 </div>
 
@@ -225,7 +210,7 @@ $conn->close();
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="js/myscript.js"></script>
+<script src="js/script.js"></script>
 
 
 </body>

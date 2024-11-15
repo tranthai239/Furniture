@@ -103,26 +103,5 @@
 
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const buttons = document.querySelectorAll(".brand-filter button");
-    const sections = {
-      "Bàn": "kitchen_products",
-      "Ghế": "kitchen_products",
-      "tủ": "bedroom_products",
-      "giường": "bedroom_products"
-    };
 
-    buttons.forEach(button => {
-      button.addEventListener("click", function() {
-        const selectedCategory = sections[button.textContent];
-        document.querySelectorAll("h3, .row").forEach(section => {
-          if (section.id && section.id !== selectedCategory) {
-            section.style.display = "none";
-          } else if (section.id === selectedCategory || !section.id) {
-            section.style.display = "block";
-          }
-        });
-      });
-    });
-  });
 

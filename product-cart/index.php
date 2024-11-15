@@ -47,7 +47,7 @@ $total_quantity = isset($row['total_quantity']) ? $row['total_quantity'] : 0;
 
   <header>
   
-    <nav class="navbar navbar-expand-lg navbar-light  container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light  container-fluid" style="background-color: #38419d;">
       <div class="container-fluid">
         <a class="navbar-brand logo" href="../product list/Product list.html"><img src="img/logo.jpg"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -57,17 +57,20 @@ $total_quantity = isset($row['total_quantity']) ? $row['total_quantity'] : 0;
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../product list/Product list.html">Home <span class="sr-only">(current)</span></a>
+               <li class="nav-item active">
+              <a class="nav-link" href="../main-product">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
+              <a class="nav-link" href="../product-list">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../product-list/index.php">Product</a>
+              <a class="nav-link" href="../contact">contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../product-cart/index.php">Cart</a>
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../product-cart">Cart</a>
             </li>
           </ul>
            <ul class="navbar-nav ml-auto">
@@ -96,8 +99,7 @@ $total_quantity = isset($row['total_quantity']) ? $row['total_quantity'] : 0;
   <main>
          <div class="row" style="
     width: -webkit-fill-available;
-    margin: 20px 80px 20px 80px;
-    padding: 20px 80px 80px 80px;
+    padding: 10px 10px 10px 10px;
     background: linear-gradient(45deg, black, transparent);
 ">
         <div class="col-md-8 col-lg-8 cart">
@@ -125,7 +127,6 @@ $total_quantity = isset($row['total_quantity']) ? $row['total_quantity'] : 0;
                         <img class="img-fluid" src="<?php echo $row['ImagePath']; ?>" alt="Product Image">
                     </div>
                     <div class="col">
-                        <div class="row text-muted"><?php echo $row['SKU']; ?></div>
                         <div class="row"><?php echo $row['NameProduct']; ?></div>
                     </div>
                     <div class="col d-flex justify-content-center align-items-center">
@@ -147,62 +148,132 @@ $total_quantity = isset($row['total_quantity']) ? $row['total_quantity'] : 0;
         </div>
 
         <div class="col-md-4 col-lg-4 summary">
-            <div><h5><b>Summary</b></h5></div>
-            <hr>
-            <div class="row">
-                <div class="col" style="padding-left:0;">ITEMS <?php echo $total_quantity; ?></div>
-                <div class="col text-right">&euro; <span class="total-price"><?php echo number_format($total_price, 2); ?></span></div>
+            <div class="table-responsive">
+                <table class="table table-centered mb-0 table-nowrap">
+                    <thead>
+                        <tr>
+                            <th class="border-top-0" style="width: 110px;" scope="col">Product</th>
+                            <th class="border-top-0" scope="col">Product Desc</th>
+                            <th class="border-top-0" scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php  
+                        // Kết nối tới cơ sở dữ liệu
+                       
+
+                        // Truy vấn sản phẩm từ bảng 'cart'
+                        $query = "SELECT ImagePath, NameProduct, Price, Quantity, (Price * Quantity) AS totalPrice FROM cart";
+                        $result = mysqli_query($conn, $query);
+
+                        // Kiểm tra xem truy vấn có thành công không
+                        if (!$result) {
+                            die("Query failed: " . mysqli_error($conn));
+                        }
+
+                        // Tổng giá trị các sản phẩm
+                        $totalPrice = 0;
+
+                        // Hiển thị từng sản phẩm trong bảng
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $totalPrice += $row['totalPrice'];
+                            echo "<tr>
+                                <th scope='row'><img src='{$row['ImagePath']}' alt='product-img' title='product-img' class='avatar-lg rounded'></th>
+                                <td>
+                                    <h5 class='font-size-16 text-truncate'><a href='#' class='text-dark'>{$row['NameProduct']}</a></h5>
+                                    <p class='text-muted mb-0'>\${$row['Price']} x {$row['Quantity']}</p>
+                                </td>
+                                <td>\${$row['totalPrice']}</td>
+                            </tr>";
+                        }
+                        ?>
+
+                        <!-- Tổng phụ -->
+                        <tr>
+                            <td colspan="2">
+                                <h5 class="font-size-14 m-0">Sub Total :</h5>
+                            </td>
+                            <td>
+                                $<?php echo number_format($totalPrice, 2); ?>
+                            </td>
+                        </tr>
+
+                        <!-- Giảm giá -->
+                        <tr>
+                            <td colspan="2">
+                                <h5 class="font-size-14 m-0">Discount :</h5>
+                            </td>
+                            <td>
+                                - $10
+                            </td>
+                        </tr>
+
+                        <!-- Phí vận chuyển -->
+                        <tr>
+                            <td colspan="2">
+                                <h5 class="font-size-14 m-0">Shipping Charge :</h5>
+                            </td>
+                            <td>
+                                $25
+                            </td>
+                        </tr>
+
+                        <!-- Thuế ước tính
+                        <tr>
+                            <td colspan="2">
+                                <h5 class="font-size-14 m-0">Estimated Tax :</h5>
+                            </td>
+                            <td>
+                                $18.20
+                            </td>
+                        </tr> -->
+
+                        <!-- Tổng cộng -->
+                        <tr class="bg-light">
+                            <td colspan="2">
+                                <h5 class="font-size-14 m-0">Total:</h5>
+                            </td>
+                            <td>
+                                <?php
+                                    $discount = 10;
+                                    $shippingCharge = 25;
+                                 //   $estimatedTax = 18.20;
+                                    $total = $totalPrice - $discount + $shippingCharge   ;/* + $estimatedTax;*/
+                                    echo "$" . number_format($total, 2);
+                                ?>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+                <button style="border-radius: 10px;
+    margin: 5px 5px 5px 115px;">check out</button>
             </div>
-            <form>
-                <p>SHIPPING</p>
-                <select>
-                    <option class="text-muted">Standard-Delivery- &euro;5.00</option>
-                </select>
-                <p>GIVE CODE</p>
-                <input id="code" placeholder="Enter your code">
-            </form>
-            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
-                <div class="col">TOTAL PRICE</div>
-                <div class="col text-right">&euro; <span class="final-total-price"><?php echo number_format($total_price + 5, 2); ?></span></div>
-            </div>
-            <button class="btn">CHECKOUT</button>
         </div>
     </div>           
   
   </main>
 
-  <footer>
-    <!-- Footer content here -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="contact-info">
-            <h5>Contact Information</h5>
-            <p>123 Street Name, City, Country</p>
-            <p>Email: example@example.com</p>
-            <p>Phone: +123 456 789</p>
+   <footer style="background-color: #200e3a;
+    color: white;">
+      <!-- Footer content here -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-info">
+              <h5>Contact Information</h5>
+              <P> trần thanh thái</P>
+              <p>Hai Ba Trung - Ha noi</p>
+              <p>Email: tranthai2309hg@gmail.com</p>
+              <p>Phone: +84 86 7747 280</p>
+              <p> DHTI15A9HN</p>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="feedback">
-            <h5>Send Feedback</h5>
-            <form>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="3" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send</button>
-            </form>
-          </div>
+        
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 
 

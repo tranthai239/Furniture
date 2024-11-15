@@ -80,11 +80,13 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 10px;
 }
 
 /* Chuyển màu khi hover lên nút */
 button:hover {
     background-color: #45a049;
+    
 }
 
 /* Định dạng cho phần thông báo lỗi (nếu có) */
@@ -92,6 +94,9 @@ button:hover {
     color: red;
     font-size: 14px;
     margin-top: 10px;
+}
+a{
+    color: white;
 }
 
     </style>
@@ -107,6 +112,9 @@ button:hover {
         <input type="password" name="password" id="password" required>
         <br>
         <button type="submit">Đăng nhập</button>
+            <button  > <a href="../LOGIN-REGISTER/index.html"> sang trang đăng nhập dành cho người dùng</a></button>
+
     </form>
+
 </body>
 </html>

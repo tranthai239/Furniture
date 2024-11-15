@@ -46,14 +46,20 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+               <li class="nav-item active">
+              <a class="nav-link" href="../main-product">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../product-list/index.php">Product</a>
+              <a class="nav-link" href="../product-list">Product</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../product-cart/index.php">Cart</a>
+              <a class="nav-link" href="../contact">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../product-cart">Cart</a>
             </li>
            
           </ul>
@@ -112,7 +118,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               <div class="container">
         <section id="project" class="project">
 
-          <div class="heading" style="background-color: black; width: fit-content; border-radius: 10px;padding: 10px;margin: 0 auto;"><h1>our projects</h1></div>
+        
 
           <div class="box-container mx-auto">
 
@@ -157,7 +163,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </section>
                 <section id="about" class="about container">
 
-     <div class="heading" style="background-color: black; width: fit-content; border-radius: 10px;padding: 10px;margin: 0 auto;"><h1>our projects</h1></div>
+     
     <div class="row align-items-center">
 
       <div class="col-md-6 image">
@@ -165,7 +171,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       </div>
 
       <div class="col-md-6 info">
-        <p>Showrooms nội thất lớn nhất thành </p>
+        <p>Showrooms nội thất lớn nhất thành phố Hà Giang </p>
         <p>Showroom không chỉ là nơi để các doanh nghiệp trưng bày sản phẩm mà còn là nơi giúp các doanh nghiệp có thể dễ dàng quảng bá thương hiệu. Bởi vậy, hầu hết các doanh nghiệp đều chú trọng đầu tư thiết kế nội thất showroom. Nhưng thiết kế nội thất như thế nào thì sẽ đem lại hiệu quả cao nhất? Bài viết dưới đây sẽ cho bạn câu trả lời hay nhất.</p>
         <p>là đơn vị thi công và thiết kế nội thất showroom chuyên nghiệp. Với nhiều năm kinh nghiệm trong thiết kế và thi công nội thất, chúng tôi hiện là đơn vị dẫn đầu trong việc Mix & Match các phong cách nội thất. Những thiết kế mà chúng tôi thực hiện hướng đến sự sáng tạo, thu hút và mang dấu ấn riêng của thương hiệu doanh nghiệp. Để đảm bảo chất lượng, Housedesign cung cấp dịch vụ thi công nội thất trọn gói chỉnh chu trong từng chi tiết, biến ý tưởng sáng tạo nhất thành hiện thực.
 
@@ -186,7 +192,7 @@ Nếu bạn đang muốn tìm một đối tác thiết kế phong cách nội t
 
   <section id="service" class="service">
 
-      <div class="heading" style="background-color: black; width: fit-content; border-radius: 10px;padding: 10px;margin: 0 auto;"><h1>our projects</h1></div>
+     
 
     <div class="box-container mx-auto">
 
@@ -271,7 +277,7 @@ Nếu bạn đang muốn tìm một đối tác thiết kế phong cách nội t
         </div>-->
 
           <div class="col-lg-12 col-md-9 p-3">
-             <div ><h1 class="heading" style="background-color: black; width: fit-content; border-radius: 10px;padding: 10px;margin: 0 auto;">our product</h1>
+             <div >
              <?php include 'product.php'; ?></div>
             
           </div>
@@ -285,7 +291,7 @@ Nếu bạn đang muốn tìm một đối tác thiết kế phong cách nội t
 
     </main>
 
-    <footer>
+  <footer>
       <!-- Footer content here -->
       <div class="container">
         <div class="row">
@@ -296,7 +302,7 @@ Nếu bạn đang muốn tìm một đối tác thiết kế phong cách nội t
               <p>Hai Ba Trung - Ha noi</p>
               <p>Email: tranthai2309hg@gmail.com</p>
               <p>Phone: +84 86 7747 280</p>
-              <p> DHTIA9HN</p>
+              <p> DHTI15A9HN</p>
             </div>
           </div>
         

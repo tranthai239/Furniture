@@ -97,9 +97,29 @@
   height: 300px;
   /* Ensure rounded corners for images */
 }
-..product-card{
-  border-radius: 10%;
-}
+
+    .product-card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .product-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .product-card .card-body {
+        display: flex;
+        
+        flex-wrap: wrap;
+    }
+
 
 .product:hover .icons {
   opacity: 1;
@@ -585,4 +605,5 @@ height:fit-content;    }
       }
     }
 /*left menu*/
+
 
